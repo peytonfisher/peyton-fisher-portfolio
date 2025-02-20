@@ -1,0 +1,113 @@
+.contact-form {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 4.5rem auto;
+    background-color: #ffffff93;
+    border-radius: 19px;
+    box-shadow: 0 4px 8px #ff010153;
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0.1rem;
+    color: #525252;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #525252;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px #ff010132;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0f94b6;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #15a6ca;
+  }
+  
+  .success-message {
+    color: #0f94b6;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .error-message {
+    color: #ff0062;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  @keyframes fadeInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .contact-form {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .fade-in {
+    animation: fadeInFromLeft 0.6s ease forwards;
+  }
+  
+  @media (max-width: 600px) {
+    .contact-form {
+        padding: 1rem;
+        max-width: 90%;
+        margin: 6rem auto;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9rem; 
+      padding-left: 0.1rem;
+      padding-right: 0.1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}
+  

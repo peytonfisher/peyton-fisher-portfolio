@@ -1,0 +1,137 @@
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* padding-left: 4rem; */
+  /* padding-top: 4rem; */
+  gap: 4.5rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.greeting {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #525252;
+  margin-top: 4rem;
+  margin-bottom: 0;
+  flex-basis: 100%;
+}
+
+.left-side {
+  margin-left: 7.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+.right-side {
+  flex: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 2rem; */
+  align-items: center;
+}
+
+.profile-section {
+  max-width: 600px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #2d2d2d;
+  line-height: 1.5;
+}
+
+.skills-section {
+  max-width: 600px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skills-list li {
+  font-size: 1rem;
+  color: #2d2d2d;
+}
+
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.left-side,
+.profile-section,
+.skills-section {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-in {
+  animation: fadeInFromLeft 0.6s ease forwards;
+}
+
+@media (max-width: 100vh) {
+  .about-me {
+    max-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-left: none;
+    padding: 0rem 1rem;
+    gap: 0rem;
+  }
+
+  .greeting {
+    margin-bottom: 1rem;
+    margin-top: 3.7rem;
+  }
+
+  .left-side, .right-side {
+    max-width: 100%;
+  }
+
+  .left-side {
+    margin-left: 0;
+  }
+
+  .profile-image {
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .right-side {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .skills-section {
+    padding-left: 20px;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
